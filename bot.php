@@ -1,6 +1,7 @@
 <?php
 $output = json_decode(file_get_contents('php://input'));
 $chat_id = $output['message']['chat']['id'];
+file_put_contents('lol.txt', $output);
 $access_token = '256842049:AAFivsiW7p8a0tveHbNgbkjq_E9cuKvs8HE';
 $api = 'https://api.telegram.org/bot' . $access_token . '/';
 $message = $output['message']['text'];
